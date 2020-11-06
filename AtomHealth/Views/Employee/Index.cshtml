@@ -1,0 +1,89 @@
+﻿@model IEnumerable<AtomHealth.Models.Atom>
+<link rel="stylesheet" href="~/css/site.css" />
+@{
+    ViewData["Title"] = "List of all Patients";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="color:#42a5ff; font-size:large; font-weight:bold">View List of all Patients</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table id="customers">
+    <tr>
+        <th> First Name</th>
+        <th> Middle Name</th>
+        <th> Last Name </th>
+        <th>  Health ID </th>
+
+        <th>  Phone </th>
+        <th>Email</th>
+        <th>Sex</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Marital Status</th>
+        <th>Emergency Contact Phone</th>
+        <th>Relationship to Emergency Contact</th>
+       
+        <th>Username</th>
+       
+        <th>Date of Birth</th>
+      <th></th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.middlename)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.healthid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sex)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ismarried)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emergencyphone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.relationship)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.dob)
+        </td>
+       
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.atomid">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.atomid">Details</a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,104 @@
+﻿@model AtomHealth.Models.Atom
+
+<link rel="stylesheet" href="~/css/details.css" />
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+
+    <table id="customer">
+
+        <tr>
+            <th>First Name</th>
+            <td>  @Html.DisplayFor(model => model.firstname)</td>
+        </tr>
+
+        <tr>
+            <th>Middle Name</th>
+            <td>@Html.DisplayFor(model => model.middlename)</td>
+        </tr>
+
+        <tr>
+            <th>Last Name</th>
+            <td> @Html.DisplayFor(model => model.lastname)</td>
+        </tr>
+
+        <tr>
+            <th>Phone</th>
+            <td> @Html.DisplayFor(model => model.phone)</td>
+        </tr>
+
+        <tr>
+            <th>Email</th>
+            <td>@Html.DisplayFor(model => model.email)</td>
+        </tr>
+
+        <tr>
+            <th>Sex</th>
+            <td>  @Html.DisplayFor(model => model.sex)</td>
+        </tr>
+
+       
+
+        <tr>
+            <th>Height</th>
+            <td>@Html.DisplayFor(model => model.height)</td>
+        </tr>
+
+        <tr>
+            <th>Weight</th>
+            <td> @Html.DisplayFor(model => model.weight)</td>
+        </tr>
+        <tr>
+            <th>Marital Status</th>
+            <td> @Html.DisplayFor(model => model.ismarried)</td>
+        </tr>
+
+        <tr>
+            <th>Emergency Phone Number</th>
+            <td>@Html.DisplayFor(model => model.emergencyphone)</td>
+        </tr>
+        <tr>
+            <th>Relationship with Emergency Contact</th>
+            <td> @Html.DisplayFor(model => model.relationship)</td>
+        </tr>
+
+        <tr>
+            <th>In Medication Now?</th>
+            <td> @Html.DisplayFor(model => model.inmedicationnow)</td>
+        </tr>
+        <tr>
+            <th>Medication Details</th>
+            <td>@Html.DisplayFor(model => model.medication)</td>
+        </tr>
+
+       
+        <tr>
+            <th>Registration Date</th>
+            <td> @Html.DisplayFor(model => model.registrationdate)</td>
+        </tr>
+        <tr>
+            <th>Date of Birth</th>
+            <td> @Html.DisplayFor(model => model.dob)</td>
+        </tr>
+        <tr>
+            <th>Registered by</th>
+            <td> @Html.DisplayFor(model => model.registeredby)</td>
+        </tr>
+        <tr>
+            <th>Diseases</th>
+            <td> @Html.DisplayFor(model => model.diseases)</td>
+        </tr>
+       
+    </table>
+
+            
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.atomid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
