@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="~/css/reset.css" />
     <link rel="stylesheet" href="~/css/layoutpage.css" />
     @*<environment include="Development">*@
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/jquery-validate/jquery.validate.js"></script>
-        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
-        <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     @*</environment>*@
 
 </head>
@@ -44,38 +44,38 @@
                 @if (ViewBag.positionid == null)
                 {
 
-                <ul class="navContainer">
-                    <li class="liSpace">
-                        <a asp-controller="Home" asp-action="Index">HOME</a>
-                    </li>
-                    <li>
-                        <a asp-controller="Doctor" asp-action="Index">DOCTORS</a>
-                    </li>
-                    <li>
-                        <a asp-controller="Patient" asp-action="Index">PATIENT</a>
-                    </li>
-                    <li>
-                        <a asp-controller="EMR" asp-action="Index">TELEMEDICINE / EMR</a>
-                    </li>
-                    <li>
-                        <a asp-controller="Insurance" asp-action="Index">MEDICAL INSURANCE</a>
-                    </li>
-                    <li>
-                        <a asp-controller="FAQ" asp-action="Index">FAQ</a>
-                    </li>
-                    <li>
-                        <a asp-controller="Contact" asp-action="Index">CONTACT US</a>
-                    </li>
-                </ul>
-                <div class="rightMenu">
+                    <ul class="navContainer">
+                        <li class="liSpace">
+                            <a asp-controller="Home" asp-action="Index">HOME</a>
+                        </li>
+                        <li>
+                            <a asp-controller="Doctor" asp-action="Index">DOCTORS</a>
+                        </li>
+                        <li>
+                            <a asp-controller="Patient" asp-action="Index">PATIENT</a>
+                        </li>
+                        <li>
+                            <a asp-controller="EMR" asp-action="Index">TELEMEDICINE / EMR</a>
+                        </li>
+                        <li>
+                            <a asp-controller="Insurance" asp-action="Index">MEDICAL INSURANCE</a>
+                        </li>
+                        <li>
+                            <a asp-controller="FAQ" asp-action="Index">FAQ</a>
+                        </li>
+                        <li>
+                            <a asp-controller="Contact" asp-action="Index">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <div class="rightMenu">
 
-                    <p style="color:white; font-size:14px;">Hi Visitor!</p>
-                    <div class="signinoutLink">
-                        <a asp-controller="SignupAtom" asp-action="Signin">Signin</a>
-                        <a asp-controller="SignupAtom" asp-action="CreateForUserWhoNeedHelp">Signup</a>
+                        <p style="color:white; font-size:14px;">Hi Visitor!</p>
+                        <div class="signinoutLink">
+                            <a asp-controller="SignupAtom" asp-action="Signin">Signin</a>
+                            <a asp-controller="SignupAtom" asp-action="CreateForUserWhoNeedHelp">Signup</a>
+                        </div>
+
                     </div>
-
-                </div>
                 }
 
                 @*Admin Login *@
@@ -154,7 +154,7 @@
 
             </div>
         </div>
-      
+
 
     </header>
 
