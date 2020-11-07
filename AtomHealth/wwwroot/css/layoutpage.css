@@ -17,7 +17,7 @@
     height: 110px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     border-bottom: 1px solid gray;
 }
 
@@ -34,6 +34,7 @@
 
 .logoHolder {
     margin-top: 0px;
+    margin-right: 65px;
 }
 
 .workDay {
@@ -62,13 +63,21 @@
 
 .socialMedia {
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
+    width: 20px;
+    margin-top: 25px;
 }
+
 
 .navContainer {
     display: flex;
     flex-direction: row;
-    margin-top: 25px;
+    margin-top: 30px;
+    font-weight:500;
+}
+
+.lispace {
+    width:100%;
 }
 
 li a {
@@ -84,7 +93,9 @@ li a {
     /*background-color: #42a5ff;*/
     /*border-radius:8px;*/
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
+    float: right;
+    margin: 15px;
 }
 
     .rightMenu p {
@@ -101,14 +112,13 @@ li a {
         padding-left: 12px;
     }
 
-.signinoutLink {
+/*.signinoutLink {
     display: flex;
     flex-direction: row;
-}
-
-.bodyContainer {
+}*/
+    .bodyContainer {
     width: 65%;
-    margin: 20px auto;
+    margin: 65px auto;
     padding: 25px;
     min-height: 660px;
 }
@@ -201,6 +211,8 @@ li a {
     padding: 12px;
     margin-right: 25px;
     border: 8px solid lightgrey;
+    height: 356px;
+    width:auto;
 }
 
     .blockBox h1 {
@@ -363,7 +375,7 @@ input[type=submit] {
         margin-bottom: 5px;
     }
 
-.headerLinks {
+/*.headerLinks {
     margin-top: 0px;
     float: right;
 }
@@ -381,7 +393,7 @@ input[type=submit] {
             font-size: 12px;
             text-decoration: none;
             padding: 3px;
-        }
+        }*/
 
 .socialmediaAndSignin {
     display: flex;
