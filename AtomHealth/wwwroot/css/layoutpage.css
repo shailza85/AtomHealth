@@ -163,25 +163,33 @@ li a {
 }
 
 .bottom-left {
-    position: relative;
+    /*position: relative;
     bottom: 524px;
     width: 476px;
     left: 400px;
     border: 2px solid white;
     border-radius: 15px;
+    padding: 17px;*/
+    position: relative;
+    bottom: 524px;
+    width: 595px;
+    left: 230px;
     padding: 17px;
 }
 
     .bottom-left h1 {
-        font-size: 35px;
+        /*font-size: 35px;*/
         color: #42a5ff;
+        font-weight:600;
     }
 
     .bottom-left p {
-        width: 449px;
+        width: 410px;
         margin-top: 10px;
         font-size: 20px;
         color: black;
+        font-weight: 500;
+        margin-bottom: 26px;
     }
 
     .bottom-left a {
@@ -211,7 +219,7 @@ li a {
     padding: 12px;
     margin-right: 25px;
     border: 8px solid lightgrey;
-    height: 356px;
+    height: 370px;
     width:auto;
 }
 
@@ -220,15 +228,40 @@ li a {
         text-decoration: underline;
         color: #42a5ff;
         text-align: center;
+        letter-spacing: 1px;
     }
 
     .blockBox p {
         font-size: 18px;
     }
 
-/*    List color-profile patient*/
+   /* .blockBox p {
+        width: 410px;
+        margin-top: 10px;
+        font-size: 20px;
+        color: black;
+        font-weight: 500;
+    }*/
 
-#customers {
+    .blockBox a {
+        background-color: #42a5ff;
+        padding: 7px;
+        border-radius: 7px;
+        margin-top: 10px;
+        font-size: 17px;
+        color: white;
+        /* margin-bottom: 5px; */
+        text-decoration: none;
+        height: 50px;
+        
+    }
+
+.learnmore {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+/*    List color-profile patient*/
+        #customers {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
