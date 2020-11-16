@@ -16,7 +16,7 @@ namespace AtomHealth.Models
         [Display(Name = "First Name")]
         public string firstname { get; set; }
         [Display(Name = "Middle Name")]
-       
+
         public string middlename { get; set; }
         [Required(ErrorMessage = "Last Name can not be blank.")]
         [StringLength(100)]
@@ -29,8 +29,8 @@ namespace AtomHealth.Models
         public long phone { get; set; }
         [Required(ErrorMessage = "Email Address can not be blank.")]
         [Display(Name = "Email Address")]
-        [DataType(DataType.EmailAddress,ErrorMessage ="Please Enter Valid Email Address.")]
-        
+        [DataType(DataType.EmailAddress, ErrorMessage = "Please Enter Valid Email Address.")]
+
         public string email { get; set; }
         public string sex { get; set; }
         //public string ipv6 { get; set; }
@@ -50,7 +50,7 @@ namespace AtomHealth.Models
         //[Required(ErrorMessage = "Password can not be blank.")]
         //[DataType(DataType.Password)]
         //[Compare("Password", ErrorMessage = "Passwords do not match.")]
-       
+
         //public string confirmpassword { get; set; }
         public DateTime registrationdate { get; set; }
         public DateTime dob { get; set; }

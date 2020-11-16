@@ -29,7 +29,7 @@ namespace AtomHealth.Controllers
         public IActionResult Index()
         {
             ViewBag.positionid = HttpContext.Session.GetString("positionid");
-            if (ViewBag.positionid=="1" || ViewBag.positionid == "2")
+            if (ViewBag.positionid == "1" || ViewBag.positionid == "2")
             {
                 ViewBag.firstname = HttpContext.Session.GetString("firstname");
                 ViewBag.lastname = HttpContext.Session.GetString("lastname");
@@ -40,14 +40,14 @@ namespace AtomHealth.Controllers
         }
 
         [HttpGet]
-  
+
         public IActionResult Signin()
         {
             return View();
         }
 
         [HttpGet]
-      
+
         public IActionResult SigninWithSession()
         {
 
@@ -58,11 +58,11 @@ namespace AtomHealth.Controllers
         }
 
         [HttpPost]
-     
+
 
         public IActionResult SigninPost(string email, string password)
         {
-            if(email!=null && password != null)
+            if (email != null && password != null)
             {
                 //checks if user is patient
                 var rightAtom = _context.tblAtom.Where(x => x.email == email && x.password == password).FirstOrDefault();
@@ -105,7 +105,7 @@ namespace AtomHealth.Controllers
                     HttpContext.Session.SetString("password", password);
                     return RedirectToAction("SigninWithSession");
                 }
-                
+
             }
             else
             {
@@ -115,7 +115,7 @@ namespace AtomHealth.Controllers
                 HttpContext.Session.SetString("password", password);
                 return RedirectToAction("Signin");
             }
-            
+
         }
 
         [HttpGet]
@@ -173,16 +173,16 @@ namespace AtomHealth.Controllers
         [HttpGet]
         public IActionResult CreateForUserWhoNeedHelpBlank()
         {
-            
+
             ViewBag.checkyouremail = HttpContext.Session.GetString("checkyouremail");
-            
+
             ViewBag.positionid = HttpContext.Session.GetString("positionid");
             return View();
         }
         [HttpGet]
         public IActionResult CreateForUserWhoNeedHelp()
         {
-            ViewBag.duplicateemail= HttpContext.Session.GetString("duplicateemail");
+            ViewBag.duplicateemail = HttpContext.Session.GetString("duplicateemail");
             ViewBag.checkyouremail = HttpContext.Session.GetString("checkyouremail");
             ViewBag.firstname = HttpContext.Session.GetString("firstname");
             ViewBag.middlename = HttpContext.Session.GetString("middlename");
@@ -193,13 +193,13 @@ namespace AtomHealth.Controllers
             return View();
         }
         [HttpPost]
-    
+
         public IActionResult CreateForUserWhoNeedHelp(Atom atom)
         {
             if (atom.firstname != null && atom.lastname != null && atom.email != null && atom.password != null)
             {
                 var duplicateTarget = _context.tblAtom.Where(x => x.email == atom.email).FirstOrDefault();
-                if(duplicateTarget==null)
+                if (duplicateTarget == null)
                 {
                     HttpContext.Session.SetString("checkyouremail", "Please check your email for validation");
                     //ViewBag.checkyouremail = HttpContext.Session.GetString("checkyouremail");
@@ -215,7 +215,7 @@ namespace AtomHealth.Controllers
                     tblAtom.phone = atom.phone;
                     tblAtom.email = atom.email;
                     tblAtom.password = atom.password;
-                   
+
                     tblAtom.registrationdate = DateTime.Now;
                     tblAtom.dob = atom.dob;
                     tblAtom.registeredby = tblAtom.firstname;
@@ -223,8 +223,8 @@ namespace AtomHealth.Controllers
                     _context.SaveChanges();
                     ViewBag.Success = "You are signed up successfully. Please check your email for verification.";
                     HttpContext.Session.SetString("checkyouremail", "Please check your email for validation");
-               
-                return RedirectToAction("CreateForUserWhoNeedHelpBlank");
+
+                    return RedirectToAction("CreateForUserWhoNeedHelpBlank");
                 }
                 else
                 {
@@ -246,7 +246,7 @@ namespace AtomHealth.Controllers
                     ViewBag.Email = atom.email;
                     ViewBag.Password = atom.password;
                     HttpContext.Session.SetString("duplicateemail", "This email address already exists.");
-                   
+
                     return RedirectToAction("CreateForUserWhoNeedHelp");
                 }
                 //return View();

@@ -1,10 +1,10 @@
-﻿<link rel="stylesheet" href="~/css/layoutpage.css" />
+﻿<link rel="stylesheet" href="~/css/site.css" />
 @{
     ViewData["Title"] = "For Patients";
     Layout = "~/Views/Shared/_LayoutForSubPages.cshtml";
 }
 
-<img src="~/images/patient.jpg" style="width:100%; height:350px; margin-bottom:20px; border-radius:15px;" />
+<img src="~/images/patient.jpg" style="width:100%; height:350px; margin-bottom:20px; border-radius:15px; color:black" />
 
 <h1 style="color:#42a5ff; font-size:24px; font-weight:bold">Information to Patients</h1>
 <hr />
@@ -13,7 +13,10 @@
     Sign up with us, create your profile and our software generates a unique digital ID, specific to you. All your vital health information- including your medical conditions, medications, allergies, past medical history, family history, genetic history, is stored securely in this unique digital healthID assigned to you, much like a passport carrying your travel history. You have the view-only access key on you at all times and can share that with another healthcare provider, whether you are doing a virtual consult on telemedicine platform or you are in a walk-in clinic. 
     What's more? You can add family members or dependents and ensure their well-being too.
 </p>
-<p style="font-size:18px; line-height:20px; margin-bottom:15px;"><a asp-controller="SignupAtom" asp-action="CreateForUserWhoNeedHelp">Signup</a> with us today to join us on this journey.</p>
+<p style="font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 15px;
+        color: black"><a style= "font-weight: bold;" asp-controller="SignupAtom" asp-action="CreateForUserWhoNeedHelp">Signup</a> with us today to join us on this journey.</p>
 
 
 
