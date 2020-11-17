@@ -150,6 +150,9 @@ a {
     font-size: 18px;
 }
 
+.welcometext {
+    margin-top:15px; 
+}
 /*    css form contact form*/
 input[type=text], select, textarea {
     width: 100%;
@@ -198,13 +201,6 @@ input[type=submit] {
     margin: 25px 0px;
 }
 
-.rightContactForm {
-    margin-left: 20px;
-    float: right;
-    border-left: 1px dotted gray;
-}
-
-
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -222,6 +218,7 @@ html {
     .container {
         max-width: 80%;
     }
+
 }
 
 @media (min-width: 800px) {
@@ -278,11 +275,11 @@ html {
             margin-bottom: 5px;
             text-decoration: none;
         }
+
+
 }
 
-.border-top {
-    border-top: 1px solid #e5e5e5;
-}
+
 
 .border-bottom {
     border-bottom: 1px solid #e5e5e5;
