@@ -31,7 +31,7 @@ namespace AtomHealth.Models
         [Display(Name = "Email Address")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Please Enter Valid Email Address.")]
 
-        public string email { get; set; }
+        public string email { get; set; }      
         public string sex { get; set; }
         //public string ipv6 { get; set; }
         public decimal height { get; set; }
